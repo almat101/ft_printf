@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 14:45:16 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/26 17:02:46 by amatta           ###   ########.fr       */
+/*   Updated: 2023/05/02 15:20:18 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ int	handle_case(va_list args, const char c)
 	int	count;
 
 	count = 0;
-	if (c == '%')
-		count += write_char('%');
-	else if (c == 'c')
+	if (c == 'c')
 		count += write_char(va_arg(args, int));
 	else if (c == 's')
 		count += write_str(va_arg(args, char *));
@@ -34,6 +32,8 @@ int	handle_case(va_list args, const char c)
 		count += write_hexa(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (c == 'X')
 		count += write_hexa(va_arg(args, unsigned int), "0123456789ABCDEF");
+	else if (c == '%')
+		count += write_char('%');
 	return (count);
 }
 

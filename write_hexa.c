@@ -6,13 +6,13 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:51:21 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/26 16:39:05 by amatta           ###   ########.fr       */
+/*   Updated: 2023/05/02 15:02:13 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	write_hexa(unsigned int n, char *hexa)
+int	write_hexa(unsigned long n, char *hexa)
 {
 	int	i;
 
