@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 14:45:16 by amatta            #+#    #+#             */
-/*   Updated: 2023/05/02 15:20:18 by amatta           ###   ########.fr       */
+/*   Updated: 2023/05/02 18:01:43 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		count;
 
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	va_start(args, str);
