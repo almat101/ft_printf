@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:15:27 by amatta            #+#    #+#             */
-/*   Updated: 2023/05/02 12:57:03 by amatta           ###   ########.fr       */
+/*   Updated: 2023/05/04 14:53:08 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	write_str(char *str)
 {
-	int	len;
+	int	i;
 
 	if (!str)
 	{
 		str = "(null)";
-		len = 6;
+		i = 6;
 	}
-	len = 0;
-	while (*str)
+	i = 0;
+	while (str[i])
 	{
-		write_char(*str++);
-		len++;
+		write_char(str[i]);
+		i++;
 	}
-	return (len);
+	return (i);
 }

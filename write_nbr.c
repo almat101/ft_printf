@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 16:34:11 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/26 16:40:00 by amatta           ###   ########.fr       */
+/*   Updated: 2023/05/04 15:11:58 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	write_nbr(int n)
 	}
 	if (n > 9)
 		i += write_nbr(n / 10);
-	i += write_char(n % 10 + '0');
+	i += write_char(n % 10 + 48);
 	return (i);
 }
